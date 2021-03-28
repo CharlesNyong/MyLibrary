@@ -10,6 +10,12 @@ import { AddBooksComponent } from './add-books/add-books.component';
 import { UpdateBookStatusComponent } from './update-book-status/update-book-status.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { RegisterUserComponent } from './register-user/register-user.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { SurveyComponent } from './survey/survey.component';
+import { ReadingBuddiesComponent } from './reading-buddies/reading-buddies.component';
+
 
 @NgModule({
   declarations: [
@@ -18,13 +24,18 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ReadsComponent,
     PendingReadsComponent,
     AddBooksComponent,
-    UpdateBookStatusComponent
+    UpdateBookStatusComponent,
+    LoginComponent,
+    RegisterUserComponent,
+    ResetPasswordComponent,
+    SurveyComponent,
+    ReadingBuddiesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from '../authentication.service';
 import { Book } from '../book';
 import { BookService } from '../book.service';
 
@@ -13,7 +14,7 @@ export class AddBooksComponent implements OnInit {
   selectedReadingStatus:any;
   bookService: BookService;
 
-  constructor(injectedBookService: BookService) {
+  constructor(injectedBookService: BookService, public authenticationService: AuthenticationService) {
     this.bookService = injectedBookService;
     this.myBook = new Book();
   }
@@ -22,6 +23,7 @@ export class AddBooksComponent implements OnInit {
   }
 
   onSubmit(formObject): void{
+    this.myBook.userID = this.authenticationService.getCurrentUser().getID();
     console.log("form submitted, book object contains:\n" + this.myBook.toString());
     var saveDataPromise = this.bookService.addBook(this.myBook);
     saveDataPromise.then(function(value){

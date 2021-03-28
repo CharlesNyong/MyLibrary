@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="text-center pageTitleHeaders">
+        <h3>TAKE A SURVEY</h3>
+        <br>
+        <h4>Help us improve this app! Tell us what can be better or added!</h4> 
+    </div>
+    <br>
+    <form class="form-signin" (ngSubmit)="onSubmit(surveyForm)" #surveyForm="ngForm">
+        <label for="feedbackSubject" class="sr-only">Area of improvement</label>
+        <input type="text" id="feedbackSubject" name="surveySubject" class="form-control" placeholder="Feature addition or general comment or both?" autofocus ngModel>
+
+        <label for="surveyNote" class="sr-only">What do you think?</label>
+        <textarea rows="10" type="text" id="surveyNote" name="surveyText" class="form-control" placeholder="type survey here!" required autofocus ngModel></textarea>
+
+        <input type="hidden" id="senderEmail" name="senderEmail" class="form-control">
+
+        <input type="hidden" id="surveyOwner" name="surveyOwner" class="form-control">
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit Survey</button>
+    </form>
+</div>

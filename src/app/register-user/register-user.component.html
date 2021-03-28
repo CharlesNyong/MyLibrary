@@ -1,0 +1,30 @@
+<div class="register-bg-img-wrapper">
+    <div class="login-wrapper">
+        <div class="card">
+            <div class="card-body">
+                <form class="form-signin" (ngSubmit)=onSubmit(signInForm) #signInForm="ngForm">
+                    <h1 class="h3 mb-3 font-weight-normal">Register/Sign up</h1>
+
+                    <label for="inputName" class="sr-only">Username</label>
+                    <input type="text" id="inputName" name="name" class="form-control" placeholder="User name" required autofocus ngModel>
+
+                    <label for="inputEmail" class="sr-only">Email address</label>
+                    <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus ngModel>
+                    
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required ngModel>
+                    
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+
+                    <div class="alert alert-danger" role="alert" *ngIf="isFormInvalid">
+                        Please fill in all fields
+                    </div>
+
+                    <div class="alert alert-danger" role="alert" *ngIf="userAlreadyExist">
+                        username already exist!!
+                    </div>
+                </form>            
+            </div>
+        </div>
+    </div>
+</div>

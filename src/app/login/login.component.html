@@ -1,0 +1,35 @@
+<div class="bg-img-wrapper">
+    <div id="siteSlogan" class="siteSlogan">
+        <h2><b>MYLIBRARYPLUS</b></h2>
+        <small id="smallSlogan">TRACKING YOUR READING PROGRESS HAS NEVER BEEN EASIER!</small>
+    </div>
+    <div class="login-wrapper">
+        <div class="card">
+            <div class="card-body">
+                <form class="form-signin" (ngSubmit)=onSubmit(signInForm) #signInForm="ngForm">
+                    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
+                    <label for="inputEmail" class="sr-only">Email address</label>
+                    <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus ngModel>
+                    
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required ngModel>
+                    
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                    
+                    <button class="btn btn-lg btn-primary btn-block" (click)="sendToRegistration()">Register</button>
+
+                    <button class="btn btn-lg btn-primary btn-block" (click)="sendToResetPassword()">Reset Password</button>
+
+                    <div class="alert alert-danger" role="alert" *ngIf="isFormInvalid">
+                        Please fill in all fields
+                    </div>
+
+                    <div class="alert alert-danger" role="alert" *ngIf="areCredentialsInvalid">
+                        Incorrect email/username or password
+                    </div>
+                </form>            
+            </div>
+        </div>
+    </div>
+</div>

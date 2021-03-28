@@ -7,3 +7,179 @@
     width: 96%;
     height: 90%;
 }
+
+.bg-img-wrapper{
+    /* The image used */
+    background: url("../src/assets/pictures/bg_pic_1.jpg") no-repeat center center fixed;
+    /* Control the height of the image */
+    /* min-height: 380px; */
+   
+    /* Center and scale the image nicely */
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    display: grid;
+    grid-template-areas: 
+    'siteSlogan siteSlogan loginContainer';
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+    grid-gap: 0px;
+    align-items: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* background-origin: content-box; */
+    box-sizing: border-box;
+    border: 1px solid black;
+    /* padding: 0 12rem; */
+    width: 100%;
+    height: 100vh;
+}
+
+.login-wrapper{
+    grid-area: loginContainer;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    /* align-self: start; */
+}
+
+.siteSlogan{
+    grid-area: siteSlogan;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    justify-self: center;
+}
+
+.missingAreaChart{
+    width: 90%;
+    height: 200px;
+    position: absolute;
+    left: 40%;
+    top: 85%;
+    margin-top: -100px;
+    margin-left: -100px;
+}
+
+@media(max-width:1024px){
+    .bg-img-wrapper{
+        height: 100%;
+    }
+
+    body, html {
+        height: 100%;
+    }
+}
+
+@media only screen and (min-device-width: 1440px) and (max-device-width: 2560px){
+    .bg-img-wrapper{
+        height: 75rem;
+    }
+
+    body, html {
+        height: 75rem;
+    }
+}
+
+@media(max-width:768px){
+
+    .bg-img-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .login-wrapper{
+        /* grid-area: loginContainer; */
+        align-self: center;
+    }
+    
+    .siteSlogan{
+        align-self: center;
+    }
+
+    body, html {
+        height: 100%;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 375px)
+{
+    .bg-img-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        width: 100%;
+        gap: 1.6rem;
+        height: 100%;
+    }
+
+    .login-wrapper
+    {
+        align-self: center;
+        width: 19rem !important;
+    }
+
+    .siteSlogan{
+        align-self: center;
+        width: 18rem !important;
+    }
+
+    body, html {
+        height: 100%;
+    }
+
+}
+
+
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 425px){
+    .bg-img-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .login-wrapper
+    {
+        align-self: center;
+    }
+
+    .siteSlogan{
+        align-self: center;
+    }
+
+    body, html {
+        height: 100%;
+    }
+}
+
+.container-fluid{
+    padding: 0 !important;
+}
+
+body, html {
+    width: 100%;
+    /* height: 100%; */
+}

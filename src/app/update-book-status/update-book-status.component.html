@@ -9,7 +9,7 @@
         <div class="form-group">
             <label for="selectedBook">Book:</label>
             <!-- ngmodel and name attributes is required for template driven forms -->
-            <select required [(ngModel)]="bookToUpdate.name" name="selectedBook" #book="ngModel" class="form-control" (change)=onChange()>
+            <select required [(ngModel)]="bookToUpdate.name" name="selectedBook" #book="ngModel" class="form-control">
                 <option value=""></option>
                 <option *ngFor="let bookObj of booksToUpdate" value="{{bookObj.name}}">{{bookObj.name}}</option>
             </select>
@@ -19,7 +19,7 @@
         </div>
         <div class="form-group">
             <label for="selectedStatus">New Status:</label>
-            <select required [(ngModel)]="selectedStatus" name="selectedStatus" #status="ngModel" class="form-control" (change)=onChange()>
+            <select required [(ngModel)]="selectedStatus" name="selectedStatus" #status="ngModel" class="form-control">
                 <option value=""></option>
                 <option value="Completed">Completed</option>
                 <option value="Pending">Pending</option>

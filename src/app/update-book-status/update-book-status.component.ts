@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from '../authentication.service';
 import { Book } from '../book';
 import { BookService } from '../book.service';
 
@@ -16,10 +17,12 @@ export class UpdateBookStatusComponent implements OnInit {
   selectedBook: any;
   selectedStatus: any;
   dateFinished: any;
+  authenticationService: AuthenticationService;
 
-  constructor(bookService: BookService) {
+  constructor(bookService: BookService, authenticationService: AuthenticationService) {
     this.bookService = bookService;
     this.bookToUpdate = new Book();
+    this.authenticationService = authenticationService;
    }
 
   ngOnInit(): void {
@@ -38,6 +41,7 @@ export class UpdateBookStatusComponent implements OnInit {
     else{
       this.bookToUpdate.read = false;
     }
+    this.bookToUpdate.userID = this.authenticationService.getCurrentUser().getID();
     var updateBookPromise =  this.bookService.updateBook(this.bookToUpdate);
     updateBookPromise.then(function(value){
       console.log("value from server: " + value);
@@ -58,8 +62,8 @@ export class UpdateBookStatusComponent implements OnInit {
   
   }
 
-  onChange(): void{
-    alert("selected book: " + this.bookToUpdate.name + " selected status: " + this.selectedStatus);
-  }
+  // onChange(): void{
+  //   alert("selected book: " + this.bookToUpdate.name + " selected status: " + this.selectedStatus);
+  // }
 
 }

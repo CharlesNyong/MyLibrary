@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from '../authentication.service';
 import { Book } from '../book';
 import { BookService } from '../book.service';
 
@@ -10,12 +11,14 @@ import { BookService } from '../book.service';
 export class PendingReadsComponent implements OnInit {
 
   bookServices: BookService;
-  pendingRead: Book[];
+  pendingRead: Book[];  
   variableCounter: number = 0;
+  authenticationService: AuthenticationService;
 
-  constructor(bookServices:BookService) {
+  constructor(bookServices:BookService, authenticationService: AuthenticationService) {
     this.bookServices = bookServices;
     //this.variableCounter = 0;
+    this.authenticationService = authenticationService;
   }
 
   ngOnInit(): void {
@@ -27,6 +30,11 @@ export class PendingReadsComponent implements OnInit {
   }
 
   getNextLineNumber(): number{
+    // alert("next number function called ..");
+    if(this.variableCounter > this.pendingRead.length)
+    {
+      this.variableCounter = 0;
+    }
     this.variableCounter += 1;  
     return this.variableCounter;
   }
