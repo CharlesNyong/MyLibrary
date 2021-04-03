@@ -33,6 +33,7 @@ export class SurveyComponent implements OnInit {
     }
     const surveyObj = new Survey(submittedForm.value.surveySubject, submittedForm.value.surveyText, this.authenticationService.getCurrentUser().getEmail(), this.authenticationService.getCurrentUser().getName());
     // returned promise is completed at this then stage
+    console.log(surveyObj);
     this.bookService.submitSurvey(surveyObj).then((response) =>{
       // if response from server is a sucess
       if(response['success']){
