@@ -112,6 +112,13 @@
     }
 }
 
+@media only screen and (min-device-width: 425px) and (max-device-width: 768px){
+    
+    .chart-box-padding{
+        padding-left: 0 !important;
+    }
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 375px)
 {
     .bg-img-wrapper{
@@ -141,6 +148,10 @@
 
     body, html {
         height: 100%;
+    }
+
+    .chart-box-padding{
+        padding-left: 0 !important;
     }
 
 }
