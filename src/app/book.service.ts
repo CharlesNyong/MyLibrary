@@ -37,6 +37,7 @@ export class BookService {
   getReadBooks(){
     if(this.readBooks === undefined || this.readBooks.length === 0){
       var httpPromise = new Promise<void>((resolve, reject)=>{
+          console.log("get books url:" + environment.api_base_url +"/reads/" + this.currentAuthenticatedUser.getID());
           this.httpObject.get(environment.api_base_url +"/reads/" + this.currentAuthenticatedUser.getID()).toPromise()
           .then((resultFromServer) =>{
             var responseLength = Object.keys(resultFromServer).length;
