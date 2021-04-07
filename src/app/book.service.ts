@@ -24,6 +24,8 @@ export class BookService {
     this.monthsToReadCounts = [];
     this.httpObject = injectedHttpObj;
     this.currentAuthenticatedUser = authenticationService.getCurrentUser();
+    console.log("current Authenticated user: ");
+    console.log(this.currentAuthenticatedUser);
   }
 
   // getReadBooks() : Book[]{
