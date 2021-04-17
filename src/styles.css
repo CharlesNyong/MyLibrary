@@ -1,12 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
-#myAreaChart{
-    padding-left: 10px;
+#myAreaChart, #myBarChart{
+    /* padding-left: 10px;
     padding-right: 25px;
     padding-top: 0px;
     padding-bottom: 320px;
     width: 96%;
-    height: 90%;
+    height: 90%; */
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 1fr;
 }
+
+.canvasjs-chart-container
+{
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 1fr;
+}
+
+#myBarChart > .canvasjs-chart-container > .canvasjs-chart-canvas{
+    padding-left: 2rem;
+} 
 
 .bg-img-wrapper{
     /* The image used */
@@ -64,10 +78,14 @@
     margin-left: -100px;
 }
 
-@media(max-width:1024px){
+@media only screen and (min-device-width:1024px) and (max-device-width: 1440px){
     .bg-img-wrapper{
-        height: 100%;
+        min-height: 100%;
     }
+
+    #myBarChart > .canvasjs-chart-container > .canvasjs-chart-canvas{
+        height: 320px !important;
+    } 
 
     body, html {
         height: 100%;
@@ -76,7 +94,7 @@
 
 @media only screen and (min-device-width: 1440px) and (max-device-width: 2560px){
     .bg-img-wrapper{
-        height: 75rem;
+        min-height: 75rem;
     }
 
     body, html {
@@ -95,8 +113,12 @@
         margin-right: 0;
         padding: 0;
         width: 100%;
-        height: 100%;
+        min-height: 100%;
     }
+
+    /* #myBarChart > .canvasjs-chart-container > .canvasjs-chart-canvas{
+        height: 700px !important;
+    } */
 
     .login-wrapper{
         /* grid-area: loginContainer; */
@@ -117,6 +139,20 @@
     .chart-box-padding{
         padding-left: 0 !important;
     }
+
+    #myAreaChart, #myBarChart{
+        /* padding-left: 10px;
+        padding-right: 25px;
+        padding-top: 0px;
+        padding-bottom: 320px;
+        width: 96%;
+        height: 90%; */
+        grid-template-rows: 300px;
+    }
+
+    /* #myBarChart > .canvasjs-chart-container > .canvasjs-chart-canvas{
+        height: 160px !important;
+    } */
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 375px)
@@ -133,6 +169,26 @@
         width: 100%;
         gap: 1.6rem;
         min-height: 100%;
+    }
+
+    #myBarChart > .canvasjs-chart-container > .canvasjs-chart-canvas{
+        /* padding-left: 2rem; */
+        height: 160px !important;
+    }
+
+    .canvasjs-chart-canvas
+    {
+        width: 100% !important;
+    }
+
+    #myAreaChart, #myBarChart{
+        /* padding-left: 10px;
+        padding-right: 25px;
+        padding-top: 0px;
+        padding-bottom: 320px;
+        width: 96%;
+        height: 90%; */
+        grid-template-rows: 160px;
     }
 
     .login-wrapper
@@ -170,6 +226,18 @@
         padding: 0;
         width: 100%;
         height: 100%;
+    }
+
+    
+
+    #myAreaChart, #myBarChart{
+        /* padding-left: 10px;
+        padding-right: 25px;
+        padding-top: 0px;
+        padding-bottom: 320px;
+        width: 96%;
+        height: 90%; */
+        grid-template-rows: 160px;
     }
 
     .login-wrapper
