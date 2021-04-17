@@ -168,7 +168,7 @@
         padding: 0;
         width: 100%;
         gap: 1.6rem;
-        min-height: 100%;
+        min-height: 100vh i !important;
     }
 
     #myBarChart > .canvasjs-chart-container > .canvasjs-chart-canvas{
