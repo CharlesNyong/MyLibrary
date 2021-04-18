@@ -80,7 +80,7 @@
 
 @media only screen and (min-device-width:1024px) and (max-device-width: 1440px){
     .bg-img-wrapper{
-        min-height: 100vh;
+        min-height: 100vh !important;
     }
 
     #myBarChart > .canvasjs-chart-container > .canvasjs-chart-canvas{
@@ -168,7 +168,7 @@
         padding: 0;
         width: 100%;
         gap: 1.6rem;
-        min-height: 100vh !important;
+        min-height: 100% !important;
     }
 
     #myBarChart > .canvasjs-chart-container > .canvasjs-chart-canvas{
