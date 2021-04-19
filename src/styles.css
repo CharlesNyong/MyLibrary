@@ -168,11 +168,11 @@
         padding: 0;
         width: 100%;
         gap: 1.6rem;
-        min-height: 110vh !important;
+        height: 110vh !important;
     }
 
     body{
-        min-height: 110vh;
+        height: 110vh;
     }
 
     #myBarChart > .canvasjs-chart-container > .canvasjs-chart-canvas{
