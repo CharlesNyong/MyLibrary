@@ -23,7 +23,6 @@ export class ReadsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getReadBooks();
-    alert("called");
   }
 
   getReadBooks(): void{
