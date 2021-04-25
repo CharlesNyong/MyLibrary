@@ -23,6 +23,7 @@ export class ReadsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getReadBooks();
+    alert("called");
   }
 
   getReadBooks(): void{
@@ -37,7 +38,7 @@ export class ReadsComponent implements OnInit {
       this.variableCounter += 1;
     }
     else{
-      this.variableCounter = 0;
+      this.variableCounter = 1;
     }
       
     return this.variableCounter;
