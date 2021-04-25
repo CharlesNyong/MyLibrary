@@ -129,8 +129,8 @@
         align-self: center;
     }
 
-    body, html {
-        height: 100%;
+    body{
+        height: 100vh;
     }
 }
 
@@ -168,11 +168,11 @@
         padding: 0;
         width: 100%;
         gap: 1.6rem;
-        min-height: 300% !important;
+        min-height: 120vh !important;
     }
 
     body{
-        height: 100%;
+        height: 100vh;
     }
 
     #myBarChart > .canvasjs-chart-container > .canvasjs-chart-canvas{
@@ -252,5 +252,5 @@
 
 body{
     width: 100%;
-    height: 100%;
+    height: 120%;
 }
