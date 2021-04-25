@@ -30,12 +30,14 @@ export class PendingReadsComponent implements OnInit {
   }
 
   getNextLineNumber(): number{
-    // alert("next number function called ..");
-    if(this.variableCounter > this.pendingRead.length)
+    if(this.variableCounter < this.pendingRead.length)
     {
-      this.variableCounter = 0;
+      this.variableCounter += 1;
     }
-    this.variableCounter += 1;  
+    else{
+      this.variableCounter = 1;
+    }
+      
     return this.variableCounter;
   }
 
