@@ -47,7 +47,7 @@
     border: 1px solid black;
     /* padding: 0 12rem; */
     width: 100%;
-    min-height: 150vh !important;
+    min-height: 100vh !important;
 }
 
 .login-wrapper{
@@ -87,18 +87,18 @@
         height: 320px !important;
     } 
 
-    body, html {
-        height: 100%;
+    body{
+        min-height: 99vh;
     }
 }
 
 @media only screen and (min-device-width: 1440px) and (max-device-width: 2560px){
     .bg-img-wrapper{
-        min-height: 75rem;
+        min-height: 100vh;
     }
 
-    body, html {
-        height: 75rem;
+    body{
+        height: 99vh;
     }
 }
 
