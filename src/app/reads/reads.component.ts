@@ -32,11 +32,14 @@ export class ReadsComponent implements OnInit {
   }
 
   getNextLineNumber(): number{
-    if(this.variableCounter > this.booksRead.length)
+    if(this.variableCounter < this.booksRead.length)
     {
+      this.variableCounter += 1;
+    }
+    else{
       this.variableCounter = 0;
     }
-    this.variableCounter += 1;  
+      
     return this.variableCounter;
   }
 
