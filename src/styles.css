@@ -172,7 +172,7 @@
     }
 
     body{
-        height: 110vh;
+        min-height: 100vh;
     }
 
     #myBarChart > .canvasjs-chart-container > .canvasjs-chart-canvas{
