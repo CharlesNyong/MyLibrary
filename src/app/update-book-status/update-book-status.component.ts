@@ -48,6 +48,9 @@ export class UpdateBookStatusComponent implements OnInit {
       if(value == 1){
         alert("Book successfully updated!!");
       }
+      else{
+        console.error(value);
+      }
       formObject.resetForm();
     }.bind(this))
     

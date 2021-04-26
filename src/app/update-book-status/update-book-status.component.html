@@ -22,7 +22,6 @@
             <select required [(ngModel)]="selectedStatus" name="selectedStatus" #status="ngModel" class="form-control">
                 <option value=""></option>
                 <option value="Completed">Completed</option>
-                <option value="Pending">Pending</option>
             </select>
             <ng-template [ngIf]="status.touched && !status.valid">
                 <div class="alert alert-danger">Reading status required!</div>    
