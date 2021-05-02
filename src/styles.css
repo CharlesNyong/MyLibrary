@@ -97,6 +97,10 @@
         min-height: 100vh;
     }
 
+    #myBarChart > .canvasjs-chart-container > .canvasjs-chart-canvas{
+        height: 310px !important;
+    }
+
     body{
         height: 99vh;
     }
